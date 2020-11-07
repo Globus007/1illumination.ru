@@ -1,0 +1,48 @@
+.slider-arrows {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-arrows__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 37px;
+
+    opacity: .8;
+
+    border: solid 3px $pink;
+    border-radius: 0 18px 18px 0;
+
+    cursor: pointer;
+
+    transition: .2s linear;
+
+    animation: button 1s infinite alternate;
+
+    &.prev {
+        border-radius: 18px 0 0 18px;
+
+        .slider-arrows__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:hover {
+        background-color: $pink;
+    }
+}
+
+.slider-arrows__icon {
+    width: 20px;
+    height: 20px;
+
+    fill: $white;
+
+    &.left {
+        transform: rotate(180deg);
+    }
+
+}

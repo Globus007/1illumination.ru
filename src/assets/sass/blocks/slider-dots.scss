@@ -1,0 +1,75 @@
+.slick-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 70px;
+
+    list-style-type: none;
+
+    &::before {
+        position: absolute;
+        top: -25px;
+
+        display: block;
+        content: "";
+        width: 380px;
+        height: 1px;
+
+        background-color: $white;
+    }
+
+    li {
+        position: relative;
+
+        button {
+            position: relative;
+
+            font-family: inherit;
+            font-size: 2.4rem;
+            font-weight: bold;
+
+            color: $white;
+
+            cursor: pointer;
+
+            border: none;
+
+            transition: .2s linear;
+
+            &:hover {
+                color: $pink;
+            }
+
+            &::before {
+                position: absolute;
+                top: -30px;
+
+                content: "";
+                width: 15px;
+                height: 15px;
+
+                display: block;
+                transform: rotate(45deg);
+
+                background-color: $white;
+
+                transition: .2s linear;
+            }
+        }
+
+        &.slick-active {
+            button {
+                color: $pink;
+
+                &::before {
+                    background-color: $pink;
+                }
+            }
+        }
+    }
+
+    li + li {
+        margin-left: 70px;
+    }
+}

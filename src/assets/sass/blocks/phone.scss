@@ -1,0 +1,45 @@
+.phone {}
+
+.phone__before {
+    vertical-align: text-bottom;
+
+    height: 22px;
+    width: 22px;
+
+    fill: $pink;
+
+    &.white {
+        fill: $white;
+    }
+}
+
+.phone__icon {
+    margin-left: 5px;
+    vertical-align: text-bottom;
+
+    height: 20px;
+    width: 20px;
+
+    fill: $white;
+
+    transition: fill .2s ease-in;
+
+    &:hover {
+        fill: $pink;
+    }
+}
+
+.phone__link {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    color: $white;
+
+    text-decoration: none;
+
+    transition: color .2s ease-in;
+
+    &:hover {
+        color: $pink;
+    }
+}

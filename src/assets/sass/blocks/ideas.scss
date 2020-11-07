@@ -1,0 +1,41 @@
+.ideas {
+    margin-top: 150px;
+}
+
+.ideas__title {
+    margin: 0;
+
+    font-size: 3.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ideas__cards {}
+
+.ideas__element {
+    width: 15rem;
+    height: 15rem;
+
+    border: 2px solid $pink;
+
+    transition: .2s linear;
+}
+
+.ideas__img {
+    width: -webkit-fill-available;
+}
+
+.slick-center {
+    .ideas__element {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+.slick-center + .slick-slide {
+    .ideas__element {
+        width: 25rem;
+        height: 25rem;
+    }
+}

@@ -1,0 +1,18 @@
+.social {}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+
+    fill: $white;
+
+    transition: fill .2s ease-out;
+
+    &:hover {
+        fill: $pink
+    }
+}
+
+.social__link + .social__link {
+    margin-left: .5rem;
+}

@@ -1,0 +1,137 @@
+.book {
+    margin-top: 12.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book__col {
+    flex-basis: 49%;
+    position: relative;
+}
+
+.book__icon {
+    width: 100%;
+    height: 480px;
+
+    fill: #170841;
+
+    transform: rotate(180deg);
+}
+
+.book__shape1 {
+    position: absolute;
+    top: 280px;
+    right: 80px;
+
+    width: 140px;
+
+    transform: rotate(37deg);
+
+    animation: linear scale 1s infinite alternate;
+}
+
+.book__shape2 {
+    position: absolute;
+    right: 390px;
+    top: 45px;
+
+    transform: rotate(120deg);
+
+    animation: linear scale 1s infinite alternate .5s;
+}
+
+.book__book_img {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 1;
+}
+
+.book__arrow {
+    position: absolute;
+    right: 0;
+    top: 56px;
+
+    fill: #1f0e53;
+
+    animation: linear arrow 1s infinite alternate;
+}
+
+.book__circle-little {
+    position: absolute;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 239px;
+    height: 239px;
+    border-radius: 50%;
+
+    animation: circle 1s infinite alternate;
+}
+
+.book__circle-big {
+    position: absolute;
+    right: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 383px;
+    height: 361px;
+    border-radius: 50%;
+
+    animation: circle 1s infinite alternate .3s;
+}
+
+.book__title {
+    margin: 0;
+
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.book__text {
+    margin: 0 0 30px;
+
+    font-size: 1.8rem;
+    line-height: normal;
+
+    &--pink {
+        font-weight: 900;
+        color: $pink;
+    }
+}
+
+.book__line {
+    position: absolute;
+    right: -300px;
+    bottom: 22px;
+
+    width: 625px;
+    height: 1px;
+    background-color: #4d397b;
+
+    &::before {
+        position: absolute;
+        bottom: -3px;
+
+        content: "";
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg);
+
+        background-color: $pink;
+    }
+}
+
+.book__bubbles {
+    position: absolute;
+    right: -230px;
+    bottom: -500px;
+
+    z-index: -1;
+}

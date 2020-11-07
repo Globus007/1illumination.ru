@@ -1,0 +1,29 @@
+header {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    flex-basis: 40%;
+}
+
+.header__social {
+    flex-basis: 5%;
+}
+
+.header__buttons {
+    flex-basis: 31%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__phone {
+    flex-basis: 25%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

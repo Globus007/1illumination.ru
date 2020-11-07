@@ -1,0 +1,16 @@
+.down {
+    text-align: center;
+}
+
+.down__text {
+    margin: 0 0 10px 0;
+
+    font-size: 1.4rem;
+}
+
+.down__icon {
+    width: 30px;
+    height: 35px;
+
+    animation: download 1s infinite;
+}

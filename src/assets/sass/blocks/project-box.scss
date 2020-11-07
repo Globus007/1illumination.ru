@@ -1,0 +1,95 @@
+.project-box {
+    position: relative;
+
+    width: 430px;
+
+    margin-top: 30px;
+
+    cursor: pointer;
+
+    animation: circle 1s infinite alternate .3s;
+
+    &.right {
+        margin: 30px auto 0;
+    }
+
+    &:hover .project-box__img {
+        transform: translateY(-5px);
+    }
+}
+
+.project-box__img {
+    position: absolute;
+    left: 30px;
+    top: -30px;
+
+    width: 460px;
+    height: auto;
+
+    transition: .2s;
+}
+
+.project-box__rect {
+    width: 430px;
+    height: 419px;
+    border: solid 3px $pink;
+
+    &.blue {
+        border-color: #36b5f8;
+    }
+}
+
+.project-box__title {
+    position: absolute;
+    left: 0;
+    top: 253px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: normal;
+
+    width: 242px;
+    height: 60px;
+    opacity: 0.85;
+    background-color: #4f03bf;
+
+    &.right {
+        top: 0;
+        right: -60px;
+        left: unset;
+    }
+}
+
+.project-box__text {
+    position: absolute;
+    left: 0;
+    top: 313px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+
+    font-size: 1.9rem;
+    font-weight: 600;
+
+    width: 156px;
+    height: 40px;
+    opacity: 0.85;
+    background-color: #9c0ce8;
+
+    &.right {
+        top: 60px;
+        right: -60px;
+        left: unset;
+    }
+}
+
+.project-box + .project-box {
+    margin-top: 65px;
+}

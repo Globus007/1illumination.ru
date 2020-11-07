@@ -1,0 +1,58 @@
+.service-box {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20px;
+
+    width: 360px;
+    height: 214px;
+
+    border-radius: 10px;
+    border: solid 2px $pink;
+
+    cursor: pointer;
+
+    transition: .1s ease-in-out;
+
+    animation: linear button 1s infinite alternate;
+
+    &:hover {
+        transform: scale(1.05);
+
+        background-image: linear-gradient(120deg, $pink, $blue);
+        border: none;
+
+        & .service-box__icon {
+            fill: $white;
+        }
+    }
+}
+
+.service-box__icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    fill: $pink;
+}
+
+.service-box__title {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.service-box__text {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+    line-height: normal;
+}

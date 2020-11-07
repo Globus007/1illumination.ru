@@ -1,0 +1,51 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__link {
+    text-decoration: none;
+}
+
+.logo__icon {
+    width: 125px;
+    height: 38px;
+
+    padding-right: 5px;
+
+    vertical-align: text-bottom;
+    transition: opacity .2s ease-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.logo__text {
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.logo__2021 {
+    padding-right: 25px;
+
+    font-size: 3.8rem;
+    font-weight: bold;
+    color: $white;
+    transition: opacity .2s ease-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    & .pink {
+        color: $pink;
+    }
+}
+
+.logo-text {
+    //    vertical-align: middle;
+    font-size: 1.2rem;
+    line-height: normal;
+    letter-spacing: normal;
+}

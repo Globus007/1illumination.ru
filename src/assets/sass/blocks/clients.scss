@@ -1,0 +1,125 @@
+.clients {
+    position: relative;
+
+    margin-top: 16rem;
+    padding: 130px 0 115px;
+
+    background-color: $bg_blue;
+}
+
+.clients__shape1 {
+    position: absolute;
+    left: calc(50% - 550px);
+    bottom: -25px;
+
+    transform: rotate(45deg);
+
+    animation: linear scale 1s infinite alternate;
+}
+
+.clients__shape2 {
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 30px;
+
+    animation: linear scale 1s infinite alternate;
+}
+
+.clients__row {
+    display: flex;
+}
+
+.clients__col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+
+    &--row {
+        flex-basis: 65%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.clients__title {
+    margin: 20px 0 20px;
+
+    font-size: 3.6rem;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.clients__text {
+    position: relative;
+
+    margin: 0 0 80px;
+    padding-left: 20px;
+
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: normal;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 5px;
+
+        display: inline-block;
+        vertical-align: middle;
+
+        content: "";
+        width: 7px;
+        height: 7px;
+
+        transform: rotate(45deg);
+        background-color: $pink;
+    }
+}
+
+.clients__btn {
+    position: relative;
+    align-self: flex-end;
+
+    width: 220px;
+    height: 46px;
+
+    border-radius: 23px;
+}
+
+.clients__line {
+    position: absolute;
+    left: -340px;
+    bottom: 233px;
+
+    width: 625px;
+    height: 1px;
+    background-color: #4d397b;
+
+    &::before {
+        position: absolute;
+        bottom: -3px;
+        right: 0;
+
+        content: "";
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg);
+
+        background-color: $pink;
+    }
+}
+
+.clients__box {
+    width: fit-content;
+    flex-basis: 25%;
+
+    height: 115px;
+    line-height: 115px;
+
+    text-align: center;
+}
+
+.clients__img {
+    vertical-align: middle;
+}

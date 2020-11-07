@@ -1,0 +1,114 @@
+.main {
+    position: relative;
+    height: 100vh;
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.main__title {
+    margin: 130px 0 20px 0;
+
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.main__subtitle {
+    margin: 0 0 29px 0;
+
+    font-size: 2rem;
+}
+
+.main__down {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+}
+
+.main__deer {
+    width: 311px;
+    height: auto;
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 132px;
+}
+
+.main__circle-little {
+    position: absolute;
+    left: calc(50% + 160px);
+    top: 323px;
+
+    width: 239px;
+    height: 239px;
+    border-radius: 50%;
+
+    animation: linear circle 1s infinite alternate;
+}
+
+.main__circle-big {
+    position: absolute;
+    left: calc(50% + 85px);
+    top: 262px;
+
+    width: 383px;
+    height: 361px;
+    border-radius: 50%;
+
+    animation: linear circle 1s infinite alternate .3s;
+}
+
+.main__shape1 {
+    position: absolute;
+    left: calc(50% - 485px);
+    top: 155px;
+    z-index: 1;
+
+    animation: linear scale 1s infinite alternate;
+}
+
+.main__shape2 {
+    position: absolute;
+    left: calc(50% - 170px);
+    top: 470px;
+    z-index: -1;
+
+    animation: linear scale 1s infinite alternate .2s;
+}
+
+.main__shape3 {
+    position: absolute;
+    left: calc(50% + 20px);
+    top: 200px;
+    z-index: -1;
+
+    animation: linear scale 1s infinite alternate .4s;
+}
+
+.main__shape4 {
+    position: absolute;
+    left: calc(50% + 400px);
+    top: 440px;
+    z-index: -1;
+
+    animation: linear scale 1s infinite alternate .6s;
+}
+
+.main__wave1 {
+    position: absolute;
+    left: calc(50% - 900px);
+    top: 0;
+    z-index: -1;
+}
+
+.main__wave2 {
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 450px;
+    z-index: -1;
+}

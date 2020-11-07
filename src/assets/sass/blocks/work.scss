@@ -1,0 +1,46 @@
+.work {
+    margin-top: 23rem;
+}
+
+.work__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 5rem;
+}
+
+.work__title {
+    margin: 0;
+
+    font-size: 3.6rem;
+    font-weight: 900;
+    line-height: 3.6rem;
+
+    text-transform: uppercase;
+}
+
+.work__text {
+    position: relative;
+
+    margin: 0;
+
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: normal;
+
+    &::before {
+        position: absolute;
+        left: -20px;
+        top: 5px;
+
+        display: inline-block;
+        vertical-align: middle;
+
+        content: "";
+        width: 7px;
+        height: 7px;
+
+        transform: rotate(45deg);
+        background-color: $pink;
+    }
+}

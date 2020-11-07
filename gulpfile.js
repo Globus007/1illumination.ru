@@ -8,7 +8,7 @@ const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const cssnano = require("gulp-cssnano");
-const rigger = require("gulp-rigger");
+const include = require("gulp-include");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
 const imagemin = require("gulp-imagemin");
@@ -29,13 +29,13 @@ var path = {
         html: "src/*.html",
         js: "src/assets/js/*.js",
         css: "src/assets/sass/style.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico,json,xml}"
     },
     watch: {
         html: "src/**/*.html",
         js: "src/assets/js/**/*.js",
         css: "src/assets/sass/**/*.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico,json,xml}"
     },
     clean: "./dist"
 }
@@ -99,7 +99,7 @@ function css() {
 function js() {
     return src(path.src.js, {base: './src/assets/js/'})
         .pipe(plumber())
-        .pipe(rigger())
+        .pipe(include())
         .pipe(gulp.dest(path.build.js))
         .pipe(uglify())
         .pipe(rename({

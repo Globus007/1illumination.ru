@@ -1,10 +1,79 @@
 @import "vars";
-
+@import "animation";
 
 /* Default styles */
+
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
+
+    overflow-x: hidden;
+
+    background-image: linear-gradient(to right, #1f0155, #2d2378);
+
+    font-family: 'Montserrat', sans-serif;
+    color: $white;
+    font-size: 1rem;
+    line-height: 1.5;
 }
+
+a:focus,
+button:focus {
+    outline: none;
+}
+
+button {
+    background: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*  Bootstrap */
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/modal";
 
 
 /* Blocks */
+@import "blocks/header";
+@import "blocks/social";
+@import "blocks/phone";
+@import "blocks/logo";
+@import "blocks/btn";
+@import "blocks/line";
+@import "blocks/main";
+@import "blocks/down";
+@import "blocks/navbar";
+@import "blocks/title";
+@import "blocks/projects";
+@import "blocks/project-box";
+@import "blocks/about";
+@import "blocks/ideas";
+@import "blocks/book";
+@import "blocks/form";
+@import "blocks/services";
+@import "blocks/service-box";
+@import "blocks/clients";
+@import "blocks/catalog";
+@import "blocks/catalog-box";
+@import "blocks/find";
+@import "blocks/work";
+@import "blocks/work-box";
+@import "blocks/question";
+@import "blocks/footer";
+@import "blocks/adress";
+@import "blocks/slider-arrows";
+@import "blocks/slider-dots";
+
+/* Vendor libs */
+@import "vendor/slick";

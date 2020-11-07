@@ -1,0 +1,48 @@
+.form__input {
+    display: block;
+
+    width: 361px;
+    height: 55px;
+
+    padding-left: 2.1rem;
+    margin-bottom: 15px;
+
+    font-family: inherit;
+    color: #b4b3bc;
+
+    border-radius: 27.5px;
+    border: solid 2px $pink;
+
+    background-color: transparent;
+
+    &::placeholder {
+        font-size: 1.4rem;
+    }
+
+    &:focus::placeholder,
+    &:active::placeholder,
+    &:hover::placeholder {
+        color: $white;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+.form__input--footer {
+    background-color: $bg_blue;
+    border: none;
+}
+
+.form__btn {
+    width: 358px;
+    height: 46px;
+
+    border-radius: 22.4px;
+}
+
+.form__thanks {
+    display: none;
+}

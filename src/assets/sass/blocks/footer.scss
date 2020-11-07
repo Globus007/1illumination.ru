@@ -1,0 +1,32 @@
+.footer {
+    position: relative;
+
+    margin-top: 15rem;
+    padding-bottom: 6rem;
+
+    z-index: 0;
+
+    background-color: $bg_blue;
+}
+
+.footer__adress {
+    margin-top: 20rem;
+}
+
+.footer__politica {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: inherit;
+    }
+}

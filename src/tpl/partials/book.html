@@ -1,0 +1,41 @@
+<section class="book">
+
+    <div class="book__col">
+        <svg class="book__icon">
+            <use xlink:href="#book-bg"></use>
+        </svg>
+        <div class="book__book_img"></div>
+        <svg class="book__arrow">
+            <use xlink:href="#right-arrow"></use>
+        </svg>
+        <img class="book__shape1" src="../assets/img/main/shape1.png" alt="shape">
+        <img class="book__shape2" src="../assets/img/main/shape2.png" alt="shape">
+        <img class="book__book_img" src="../assets/img/book/book.png" alt="shape">
+        <div class="book__circle-little"></div>
+        <div class="book__circle-big"></div>
+    </div> <!-- book__col -->
+
+    <div class="book__col">
+
+        <h3 class="book__title  title">Хотите так же или лучше?</h3>
+        <p class="book__text">
+            Оставьте заявку и получите консультацию <br>
+            и дизайн-проект
+            <span class="book__text--pink">БЕСПЛАТНО!</span>
+        </p>
+
+        <form class="book__form  form" id="form-mail" onsubmit="return sendMail(this);">
+            <input class="form__input" type="text" name="name" placeholder="Введите ваше имя">
+            <input class="form__input" type="text" name="phone" placeholder="+7 (___) ___-__-__" required>
+            <button class="form__btn  btn  btn--gradient" type="submit" id="submintBTN">ОСТАВИТЬ ЗАЯВКУ</button>
+            <input type="hidden" name="yandex" value="consult">
+
+            <div class="form__thanks">Спасибо за заявку! В ближайшее время мы с Вами свяжемся!</div>
+        </form>
+
+        <div class="book__line"></div>
+        <img class="book__bubbles" src="../assets/img/book/bubbles.png" alt="bubbles">
+
+    </div> <!-- book__col -->
+
+</section>
