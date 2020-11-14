@@ -4,7 +4,7 @@
 
     padding-top: 20px;
 
-    width: 360px;
+    width: 340px;
     height: 214px;
 
     border-radius: 10px;
@@ -26,13 +26,17 @@
             fill: $white;
         }
     }
+
+    @include media-breakpoint-between(xs, lg) {
+        padding-top: 40px;
+    }
 }
 
 .service-box__icon {
     width: 58px;
     height: 58px;
 
-    margin: 0 auto 16px;
+    margin: 0 auto 1.6rem;
 
     fill: $pink;
 }

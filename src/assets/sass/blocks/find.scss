@@ -6,6 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
 }
 
 .find__bg {
@@ -22,11 +27,21 @@
 
     border-radius: 224.5px;
     background-color: #170841;
+
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        border-radius: 80px;
+        bottom: 0;
+        height: 450px;
+    }
 }
 
 .find__line {
     position: absolute;
-    left: -380px;
+    left: calc(50% - 1110px);
     bottom: 62px;
 
     width: 625px;
@@ -45,14 +60,35 @@
 
         background-color: $pink;
     }
+
+    @include media-breakpoint-down(lg) {
+        left: calc(50% - 1074px);
+        bottom: 92px;
+    }
+
+    @include media-breakpoint-down(md) {
+        left: 0;
+        bottom: 15px;
+        width: 30vw;
+    }
+
+    @include media-breakpoint-down(sm) {
+        bottom: 26px;
+        width: 10vw;
+    }
 }
 
 .find__wave {
     position: absolute;
-
     z-index: -2;
 
-    animation: wave 2s infinite alternate linear;
+    animation: scale 2s infinite alternate linear;
+
+    @include media-breakpoint-down(md) {
+        width: 48rem;
+        z-index: -1;
+        top: 0;
+    }
 }
 
 .find__title {
@@ -61,6 +97,12 @@
     font-size: 3rem;
     font-weight: 900;
     line-height: normal;
+
+    @include media-breakpoint-down(md) {
+        position: absolute;
+        top: -40px;
+        text-align: center;
+    }
 }
 
 .find__text {
@@ -69,6 +111,16 @@
     font-size: 1.8rem;
     font-weight: normal;
     line-height: normal;
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+}
+
+.find__form {
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
 }
 
 .find__col-img {
@@ -87,4 +139,15 @@
     border: solid 3px #36b5f8;
 
     animation: linear circle 1s infinite alternate .3s;
+
+    @include media-breakpoint-down(md) {
+        width: 31.8rem;
+        height: 31rem;
+    }
+}
+
+.find__img {
+    @include media-breakpoint-down(md) {
+        width: 300px;
+    }
 }

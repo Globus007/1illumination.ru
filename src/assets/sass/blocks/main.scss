@@ -1,34 +1,60 @@
 .main {
     position: relative;
-    height: 100vh;
 }
 
 .main__container {
     display: flex;
-    justify-content: center;
     flex-grow: 1;
     flex-direction: column;
+
+    padding-bottom: 22rem;
+
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+        padding-bottom: 0;
+    }
 }
 
 .main__title {
-    margin: 130px 0 20px 0;
+    margin: 25rem 0 20px 0;
 
     font-size: 2.8rem;
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
+    width: 55rem;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin: 70px 0 20px 0;
+    }
 }
 
 .main__subtitle {
     margin: 0 0 29px 0;
 
     font-size: 2rem;
+
+    @include media-breakpoint-down(sm) {
+        margin: 0;
+    }
 }
 
 .main__down {
     position: absolute;
     left: 50%;
     bottom: 10px;
+    transform: translateX(-50%);
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+.main__btn {
+    @include media-breakpoint-down(sm) {
+        align-self: center;
+    }
 }
 
 .main__deer {
@@ -37,6 +63,25 @@
     position: absolute;
     left: calc(50% + 100px);
     top: 132px;
+    z-index: 99;
+
+    @include media-breakpoint-between(md, lg) {
+        width: 231px;
+        left: calc(50% + 110px);
+    }
+
+    @include media-breakpoint-down(md) {
+        left: unset;
+        right: 90px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 151px;
+        height: 257px;
+        position: unset;
+        display: block;
+        align-self: center;
+    }
 }
 
 .main__circle-little {
@@ -49,6 +94,25 @@
     border-radius: 50%;
 
     animation: linear circle 1s infinite alternate;
+
+    @include media-breakpoint-between(md, lg) {
+        left: calc(50% + 115px);
+        top: 251px;
+    }
+
+    @include media-breakpoint-down(md) {
+        left: unset;
+        right: 80px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 250px;
+
+        width: 129px;
+        height: 129px;
+    }
 }
 
 .main__circle-big {
@@ -56,20 +120,52 @@
     left: calc(50% + 85px);
     top: 262px;
 
-    width: 383px;
+    width: 386px;
     height: 361px;
     border-radius: 50%;
 
     animation: linear circle 1s infinite alternate .3s;
+
+    @include media-breakpoint-between(md, lg) {
+        left: calc(50% + 41px);
+        top: 190px;
+    }
+
+    @include media-breakpoint-down(md) {
+        left: unset;
+        right: 10px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 214px;
+
+        width: 206px;
+        height: 195px;
+    }
 }
 
 .main__shape1 {
     position: absolute;
     left: calc(50% - 485px);
-    top: 155px;
+    top: 55px;
+//    top: 155px;
     z-index: 1;
 
     animation: linear scale 1s infinite alternate;
+
+    @include media-breakpoint-only(md) {
+        top: 90px;
+        left: 20px;
+        width: 120px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        top: 40px;
+        left: 20px;
+        width: 90px;
+    }
 }
 
 .main__shape2 {
@@ -79,6 +175,13 @@
     z-index: -1;
 
     animation: linear scale 1s infinite alternate .2s;
+
+    @include media-breakpoint-down(md) {
+        top: 170px;
+        right: 20px;
+        left: unset;
+        width: 60px;
+    }
 }
 
 .main__shape3 {
@@ -88,6 +191,15 @@
     z-index: -1;
 
     animation: linear scale 1s infinite alternate .4s;
+
+    @include media-breakpoint-down(md) {
+        top: 290px;
+        width: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        left: 20px;
+    }
 }
 
 .main__shape4 {
@@ -97,6 +209,22 @@
     z-index: -1;
 
     animation: linear scale 1s infinite alternate .6s;
+
+    @include media-breakpoint-between(md, lg) {
+        left: calc(50% + 300px);
+    }
+
+    @include media-breakpoint-down(md) {
+        top: 360px;
+        right: 30px;
+        left: unset;
+        width: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        top: 300px;
+        right: 10px;
+    }
 }
 
 .main__wave1 {
@@ -104,6 +232,10 @@
     left: calc(50% - 900px);
     top: 0;
     z-index: -1;
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 }
 
 .main__wave2 {
@@ -111,4 +243,14 @@
     left: calc(50% - 350px);
     top: 450px;
     z-index: -1;
+
+    @include media-breakpoint-between(md, lg) {
+        width: 70%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        top: 310px;
+        left: unset;
+    }
 }

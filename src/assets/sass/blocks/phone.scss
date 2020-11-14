@@ -3,8 +3,8 @@
 .phone__before {
     vertical-align: text-bottom;
 
-    height: 22px;
-    width: 22px;
+    height: 2.2rem;
+    width: 2.2rem;
 
     fill: $pink;
 
@@ -29,6 +29,10 @@
     }
 }
 
+.phone__link-icon + .phone__link-icon {
+    margin-left: 5px;
+}
+
 .phone__link {
     font-size: 2rem;
     font-weight: 600;
@@ -41,5 +45,9 @@
 
     &:hover {
         color: $pink;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-right: 5px;
     }
 }

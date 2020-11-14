@@ -1,0 +1,92 @@
+.modal-timed__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 1;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+}
+
+.modal-timed__earhpone {
+    position: relative;
+}
+
+.modal-timed__img {
+    @include media-breakpoint-down(md) {
+        width: 200px;
+    }
+}
+
+.modal-timed__form {
+    padding-bottom: 20px;
+}
+
+.modal-timed__rect {
+    position: absolute;
+    left: 5px;
+    top: 40px;
+
+    z-index: -1;
+
+    width: 243px;
+    height: 237px;
+    border: solid 3px #36b5f8;
+
+    animation: linear circle 1s infinite alternate .3s;
+
+    @include media-breakpoint-down(md) {
+        top: 10px;
+
+        width: 144px;
+        height: 144px;
+    }
+}
+
+.modal-timed__wave {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+        top: 90px;
+        bottom: unset;
+    }
+}
+
+.modal-timed__arrow {
+    position: absolute;
+    right: 42%;
+    top: 56px;
+    z-index: -2;
+
+    fill: #1f0e53;
+
+    animation: linear arrow 1s infinite alternate;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.modal-timed--down {
+    display: none;
+
+    width: 100px;
+
+    position: absolute;
+    top: -20px;
+    left: calc(50% + 60px);
+
+    fill: #1f0e53;
+
+    animation: linear download 1s infinite alternate;
+
+    @include media-breakpoint-down(md) {
+        display: block;
+    }
+}

@@ -11,6 +11,10 @@
 
 .footer__adress {
     margin-top: 20rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 0;
+    }
 }
 
 .footer__politica {

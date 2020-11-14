@@ -1,0 +1,6 @@
+.amo-button-holder {
+    @include media-breakpoint-down(sm) {
+        right: 10px !important;
+        bottom: 10px !important;
+    }
+}

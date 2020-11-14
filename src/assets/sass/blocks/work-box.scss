@@ -8,18 +8,28 @@
 
     border-radius: 10px;
     border: solid 2px $pink;
+
+    @include media-breakpoint-only(xs) {
+        flex-direction: column;
+    }
 }
 
 .work-box__icon {
-    width: 77px;
-    height: 76px;
+    width: 7.7rem;
+    height: 7.6rem;
 
     fill: $pink;
 }
 
-.work-box__number {
-    margin: 0;
+.work-box__article {
+    display: flex;
+    align-items: center;
+}
 
+.work-box__number {
+    margin: 0 10px 0 0;
+
+    font-family: Muller;
     font-size: 11rem;
     font-weight: 800;
     line-height: normal;

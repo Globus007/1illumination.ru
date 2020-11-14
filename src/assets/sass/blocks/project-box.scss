@@ -1,7 +1,7 @@
 .project-box {
     position: relative;
 
-    width: 430px;
+    width: 43rem;
 
     margin-top: 30px;
 
@@ -16,6 +16,10 @@
     &:hover .project-box__img {
         transform: translateY(-5px);
     }
+
+    @include media-breakpoint-down(sm) {
+        width: 42rem;
+    }
 }
 
 .project-box__img {
@@ -23,26 +27,35 @@
     left: 30px;
     top: -30px;
 
-    width: 460px;
+    width: 46rem;
     height: auto;
 
     transition: .2s;
+
+    @include media-breakpoint-down(sm) {
+        width: 42rem;
+    }
 }
 
 .project-box__rect {
-    width: 430px;
-    height: 419px;
+    width: 43rem;
+    height: 41.9rem;
     border: solid 3px $pink;
 
     &.blue {
         border-color: #36b5f8;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 42rem;
+        height: 37rem;
     }
 }
 
 .project-box__title {
     position: absolute;
     left: 0;
-    top: 253px;
+    top: 25.3rem;
 
     display: flex;
     align-items: center;
@@ -53,22 +66,30 @@
     font-weight: 600;
     line-height: normal;
 
-    width: 242px;
-    height: 60px;
+    width: 24.2rem;
+    height: 6rem;
     opacity: 0.85;
     background-color: #4f03bf;
 
     &.right {
         top: 0;
-        right: -60px;
+        right: -6rem;
         left: unset;
+
+        @include media-breakpoint-down(sm) {
+            right: -5rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        top: 21rem;
     }
 }
 
 .project-box__text {
     position: absolute;
     left: 0;
-    top: 313px;
+    top: 31.3rem;
 
     display: flex;
     align-items: center;
@@ -78,15 +99,23 @@
     font-size: 1.9rem;
     font-weight: 600;
 
-    width: 156px;
-    height: 40px;
+    width: 15.6rem;
+    height: 4rem;
     opacity: 0.85;
     background-color: #9c0ce8;
 
     &.right {
-        top: 60px;
-        right: -60px;
+        top: 6rem;
+        right: -6rem;
         left: unset;
+
+        @include media-breakpoint-down(sm) {
+            right: -5rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        top: 27rem;
     }
 }
 

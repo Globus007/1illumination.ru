@@ -3,20 +3,25 @@
     display: flex;
     justify-content: center;
 
+    padding-left: 0;
     margin-top: 70px;
 
     list-style-type: none;
 
     &::before {
         position: absolute;
-        top: -25px;
+        top: -22px;
 
         display: block;
-        content: "";
+        //        content: "";
         width: 380px;
         height: 1px;
 
         background-color: $white;
+
+        @include media-breakpoint-down(md) {
+            width: 293px;
+        }
     }
 
     li {
@@ -56,6 +61,22 @@
 
                 transition: .2s linear;
             }
+
+            &::after {
+                position: absolute;
+                top: -22px;
+
+                display: block;
+                content: "";
+                width: 90px;
+                height: 1px;
+                z-index: -1;
+
+                background-color: $white;
+            }
+
+
+
         }
 
         &.slick-active {
@@ -71,5 +92,17 @@
 
     li + li {
         margin-left: 70px;
+
+        @include media-breakpoint-down(md) {
+            margin-left: 50px;
+        }
+    }
+
+    li:last-child {
+        button {
+            &::after {
+                content: none;
+            }
+        }
     }
 }

@@ -1,6 +1,10 @@
 .logo {
     display: flex;
     align-items: center;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
 }
 
 .logo__link {
@@ -8,26 +12,55 @@
 }
 
 .logo__icon {
-    width: 125px;
-    height: 38px;
+    width: 12.5rem;
+    height: 3.8rem;
 
-    padding-right: 5px;
+    padding-right: .5rem;
 
     vertical-align: text-bottom;
-    transition: opacity .2s ease-out;
+
+    transition: .2s linear;
 
     &:hover {
-        opacity: 0.8;
+        opacity: .7;
+    }
+
+    @include media-breakpoint-down(md) {
+        vertical-align: super;
+    }
+
+    @include media-breakpoint-down(sm) {
+        vertical-align: text-bottom;
+        display: none;
+    }
+}
+
+.logo__icon--footer {
+    @include media-breakpoint-down(md) {
+        vertical-align: text-bottom;
+    }
+}
+
+.logo__icon--little {
+    display: none;
+    width: 16px;
+
+    @include media-breakpoint-down(sm) {
+        display: block;
     }
 }
 
 .logo__text {
     font-size: 1.2rem;
     line-height: normal;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
 }
 
 .logo__2021 {
-    padding-right: 25px;
+    padding-right: 2.5rem;
 
     font-size: 3.8rem;
     font-weight: bold;
@@ -41,11 +74,8 @@
     & .pink {
         color: $pink;
     }
-}
 
-.logo-text {
-    //    vertical-align: middle;
-    font-size: 1.2rem;
-    line-height: normal;
-    letter-spacing: normal;
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
 }

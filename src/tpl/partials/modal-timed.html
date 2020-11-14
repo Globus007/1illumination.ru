@@ -1,0 +1,46 @@
+<div class="modal  fade  show" id="modal-timed" tabindex="-1" aria-modal="true">
+    <div class="modal-dialog  modal-dialog-centered  modal-lg">
+
+        <div class="modal-content">
+            <a class="modal-content__close" href="" data-dismiss="modal" aria-label="Close">
+                <svg class="modal-content__icon">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </a>
+
+            <div class="modal-content__header">
+                <h6 class="modal-content__title  title">Не нашли то, что искали?</h6>
+                <p class="modal-content__text">
+                    Оставьте заявку и получите консультацию <br>
+                    и дизайн-проект <span class="modal-content__text--pink">БЕСПЛАТНО!</span>
+                </p>
+            </div>
+
+            <div class="modal-body  modal-timed__content">
+
+                <div class="modal-timed__earhpone">
+                    <div class="modal-timed__rect"></div>
+                    <img class="modal-timed__img" src="../assets/img/modal/earphone.png" alt="earphone">
+                </div>
+
+                <form class="modal-timed__form  form" onsubmit="return sendMail(this);">
+                    <input class="form__input  form__input--modal" type="text" name="name" placeholder="Введите ваше имя"><br>
+                    <input class="form__input  form__input--modal" type="text" name="phone" placeholder="+7 (___) ___-__-__" required=""><br>
+                    <button class="btn  btn--gradient  btn--modal">ОСТАВИТЬ ЗАЯВКУ</button>
+                    <input type="hidden" name="yandex" value="consult">
+                </form>
+                <div class="form__thanks">Спасибо за заявку! <br> В ближайшее время мы с Вами свяжемся!</div>
+
+                <img class="modal-timed__wave" src="../assets/img/modal/wave5.png" alt="wave">
+                <svg class="modal-timed__arrow">
+                    <use xlink:href="#modal-arrow"></use>
+                </svg>
+                <svg class="modal-timed--down">
+                    <use xlink:href="#down-arrow"></use>
+                </svg>
+
+            </div> <!-- modal-body -->
+
+        </div> <!-- modal-content -->
+    </div>
+</div>

@@ -1,6 +1,11 @@
 .adress {
     display: flex;
     justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .adress__col {
@@ -10,6 +15,20 @@
 
     &.map {
         position: relative;
+
+        @include media-breakpoint-down(md) {
+            position: absolute;
+            bottom: 220px;
+            width: 100%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            bottom: 230px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        align-items: center;
     }
 }
 
@@ -17,15 +36,30 @@
     font-size: 1.8rem;
     font-weight: normal;
     line-height: normal;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 280px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 250px;
+    }
 }
 
 .adress__icon {
     vertical-align: bottom;
 
-    width: 25px;
-    height: 38px;
+    width: 2.5rem;
+    height: 3.8rem;
 
     fill: $white;
+}
+
+.adress__phone,
+.adress__mail {
+    @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+    }
 }
 
 .adress__mail__icon {
@@ -58,11 +92,15 @@
     font-size: 1.5rem;
     font-weight: normal;
     line-height: normal;
-}
 
-.adress__img {
-    width: 584px;
-    height: 354px;
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        bottom: 30px;
+    }
 }
 
 .adress__rect {
@@ -72,9 +110,37 @@
 
     z-index: -1;
 
-    width: 584px;
-    height: 354px;
+    width: 58.4rem;
+    height: 35.4rem;
     border: solid 3px #36b5f8;
 
     animation: linear circle 1s infinite alternate .3s;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}
+
+.adress__logo {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 40px;
+    }
+
+    .logo__icon,
+    .logo__text,
+    .logo__2021 {
+        display: unset;
+    }
+}
+
+.adress__yandex-map {
+    width: 58.4rem;
+    height: 35.4rem;
+
+    background-image: url(../img/footer/map.jpg);
+    background-position: center center;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
 }

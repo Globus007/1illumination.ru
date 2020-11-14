@@ -5,12 +5,18 @@
 
 html {
     font-size: 10px;
+
+    @media (min-width: 576px) and (max-width: 1199.98px) {
+        font-size: 7px;
+    }
+
+    @media (max-width: 575.98px) {
+        font-size: 6px;
+    }
 }
 
 body {
     margin: 0;
-
-    overflow-x: hidden;
 
     background-image: linear-gradient(to right, #1f0155, #2d2378);
 
@@ -42,6 +48,7 @@ button {
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/navbar";
 @import "../../../node_modules/bootstrap/scss/modal";
+@import "../../../node_modules/bootstrap/scss/transitions";
 
 
 /* Blocks */
@@ -74,6 +81,12 @@ button {
 @import "blocks/adress";
 @import "blocks/slider-arrows";
 @import "blocks/slider-dots";
+@import "blocks/modal";
+@import "blocks/modal-timed";
+@import "blocks/modal-projects";
+@import "blocks/modal-img";
+@import "blocks/amo";
+@import "blocks/up";
 
 /* Vendor libs */
 @import "vendor/slick";

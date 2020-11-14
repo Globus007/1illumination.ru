@@ -1,0 +1,35 @@
+.up-arrow {
+    position: fixed;
+    bottom: 10px;
+    transform: translateY(70px);
+    left: 10px;
+    z-index: 999;
+    visibility: hidden;
+
+    opacity: .5;
+
+    transition: .2s linear;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.show {
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+.up-arrow__btn {
+    border: 0;
+    cursor: pointer;
+}
+
+.up-arrow__icon {
+    width: 5rem;
+    height: 5rem;
+}

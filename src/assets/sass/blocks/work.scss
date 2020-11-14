@@ -1,5 +1,10 @@
 .work {
     margin-top: 23rem;
+
+    @include media-breakpoint-down(md) {
+        position: relative;
+        padding-bottom: 50px;
+    }
 }
 
 .work__header {
@@ -7,6 +12,10 @@
     justify-content: space-between;
 
     margin-bottom: 5rem;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
 }
 
 .work__title {
@@ -17,6 +26,10 @@
     line-height: 3.6rem;
 
     text-transform: uppercase;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+    }
 }
 
 .work__text {
@@ -42,5 +55,18 @@
 
         transform: rotate(45deg);
         background-color: $pink;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-left: 20px;
+    }
+}
+
+.work__arrows {
+    @include media-breakpoint-down(md) {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

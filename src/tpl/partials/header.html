@@ -1,50 +1,98 @@
-<header class="header container">
+<div class="header--fixed">
+    <header class="header container">
 
-    <div class="header__logo  logo">
-        <a class="logo__link" href="https://1illumination.ru/">
-            <svg class="logo__icon">
-                <use xlink:href="#logo"></use>
+        <div class="header__logo  logo">
+            <a class="logo__link" href="https://1illumination.ru/">
+                <svg class="logo__icon">
+                    <use xlink:href="#logo"></use>
+                </svg>
+                <svg class="logo__icon--little">
+                    <use xlink:href="#logo-little"></use>
+                </svg>
+                <span class="logo__2021">20<span class="pink">21</span></span>
+            </a>
+            <span class="logo__text">Производство световых<br> новогодних декораций</span>
+        </div> <!-- // logo -->
+
+        <div class="header__social  social">
+            <a class="social__link" href="https://www.instagram.com/1illumination.ru/" target="_blank">
+                <svg class="social__icon">
+                    <use xlink:href="#instagram"></use>
+                </svg>
+            </a>
+            <a class="social__link" href="https://www.facebook.com/1illumination.ru/" target="_blank">
+                <svg class="social__icon">
+                    <use xlink:href="#facebook"></use>
+                </svg>
+            </a>
+        </div> <!-- header__social -->
+
+        <div class="header__buttons">
+            <button class="btn  btn--gradient" data-toggle="modal" data-target="#calculateModal" data-title="Заказать расчет" data-yandex="order">Заказать расчет</button>
+            <button class="btn  btn--empty" data-toggle="modal" data-target="#calculateModal" data-title="Заказать звонок" data-yandex="consult">Заказать звонок</button>
+        </div> <!-- header__buttons -->
+
+        <div class="header__phone  phone">
+            <svg class="phone__before">
+                <use xlink:href="#phone"></use>
             </svg>
-            <span class="logo__2021">20<span class="pink">21</span></span>
-        </a>
-        <span class="logo__text">Производство праздничной <br>каркасной иллюминации</span>
-    </div> <!-- // logo -->
+            <a class="phone__link" href="tel:+79360000248">+7 (936) 0000-248</a>
+            <a class="phone__link-icon" href="https://teleg.run/ru1illumination" target="_blank">
+                <svg class="phone__icon">
+                    <use xlink:href="#telegram"></use>
+                </svg>
+            </a>
+            <a class="phone__link-icon" href="https://wa.me/79360000248?text=Доброго%20дня!" target="_blank">
+                <svg class="phone__icon">
+                    <use xlink:href="#whatsapp"></use>
+                </svg>
+            </a>
+        </div> <!-- header__phone -->
 
-    <div class="header__social  social">
-        <a class="social__link" href="https://www.instagram.com/1illumination.ru/" target="_blank">
-            <svg class="social__icon">
-                <use xlink:href="#instagram"></use>
-            </svg>
-        </a>
-        <a class="social__link" href="https://www.facebook.com/1illumination.ru/" target="_blank">
-            <svg class="social__icon">
-                <use xlink:href="#facebook"></use>
-            </svg>
-        </a>
-    </div> <!-- header__social -->
+    </header>
 
-    <div class="header__buttons">
-        <button class="btn  btn--gradient" data-toggle="modal" data-target="#calculateModal" data-title="Заказать расчет" data-yandex="order">Заказать расчет</button>
-        <button class="btn  btn--empty" data-toggle="modal" data-target="#calculateModal" data-title="Заказать звонок" data-yandex="consult">Заказать звонок</button>
-    </div> <!-- header__buttons -->
+    <nav class="navbar  navbar-expand-md">
 
-    <div class="header__phone  phone">
-        <svg class="phone__before">
-            <use xlink:href="#phone"></use>
-        </svg>
-        <a class="phone__link" href="tel:+79262844062">+7 (926) 284-40-62</a>
-        <a class="phone__link-icon" href="https://teleg.run/ru1illumination" target="_blank">
-            <svg class="phone__icon">
-                <use xlink:href="#telegram"></use>
-            </svg>
-        </a>
-        <a class="phone__link-icon" href="https://wa.me/79360000248?text=Доброго%20дня!" target="_blank">
-            <svg class="phone__icon">
-                <use xlink:href="#whatsapp"></use>
-            </svg>
-        </a>
-    </div> <!-- header__phone -->
+        <div class="collapse  navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Проекты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">о нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#clients">КЛИЕНТЫ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#catalog">каталог</a>
+                </li>
+            </ul>
 
-</header>
+            <div class="navbar__social  social">
+                <a class="social__link" href="https://www.instagram.com/1illumination.ru/" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+                <a class="social__link" href="https://www.facebook.com/1illumination.ru/" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+            </div>
 
-<div class="line"></div>
+        </div>
+    </nav>
+</div>
+
+<!--<div class="line"></div>-->
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <svg class="btn__icon">
+        <use xlink:href="#menu"></use>
+    </svg>
+</button>

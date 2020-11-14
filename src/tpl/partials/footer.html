@@ -8,21 +8,24 @@
         <img class="question__shape1" src="../assets/img/main/shape1.png" alt="shape">
         <img class="question__shape2" src="../assets/img/main/shape2.png" alt="shape">
         <img class="question__wave" src="../assets/img/footer/wave4.png" alt="wave">
-        <img class="question__fairy" src="../assets/img/footer/fairy.png" alt="fairy">
 
         <h3 class="question__title  title">Остались вопросы?</h3>
         <p class="question__text">
             Оставьте заявку, и наш менеджер <br>перезвонит Вам через 5 минут!
         </p>
 
-        <form class="form" onsubmit="return sendMail(this);">
-            <input class="form__input  form__input--footer" name="name" type="text" placeholder="Введите ваше имя">
-            <input class="form__input  form__input--footer" name="phone" type="text" placeholder="+7 (___) ___-__-__" required>
+        <form class="question__form  form" onsubmit="return sendMail(this);">
+            <input class="form__input  form__input--footer" name="name" type="text" placeholder="Введите ваше имя"><br>
+            <input class="form__input  form__input--footer" name="phone" type="text" placeholder="+7 (___) ___-__-__" required><br>
             <button class="form__btn  btn  btn--footer" type="submit" data-title="Получить консультацию" data-target="#calculateModal" data-yandex="consult">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
             <input type="hidden" name="yandex" value="consult">
-            <div class="form__thanks">Спасибо за заявку! В ближайшее время мы с Вами свяжемся!</div>
         </form>
+        <div class="form__thanks">
+            Спасибо за заявку! <br> В ближайшее время мы с Вами свяжемся!
+        </div>
+
         <div class="question__form-bg"></div>
+        <img class="question__fairy" src="../assets/img/footer/fairy.png" alt="fairy">
 
     </section> <!-- section question -->
 
@@ -41,7 +44,7 @@
                 <svg class="phone__before  white">
                     <use xlink:href="#phone"></use>
                 </svg>
-                <a class="phone__link" href="tel:+79262844062">+7 (926) 284-40-62</a>
+                <a class="phone__link" href="tel:+79360000248">+7 (936) 0000-248</a>
                 <a class="phone__link-icon" href="https://teleg.run/ru1illumination" target="_blank">
                     <svg class="phone__icon">
                         <use xlink:href="#telegram"></use>
@@ -82,21 +85,20 @@
 
             <div class="adress__logo  logo">
                 <a class="logo__link" href="https://1illumination.ru/">
-                    <svg class="logo__icon">
+                    <svg class="logo__icon  logo__icon--footer">
                         <use xlink:href="#logo"></use>
                     </svg>
                     <span class="logo__2021">20<span class="pink">21</span></span>
                 </a>
-                <span class="logo__text">Производство праздничной <br>каркасной иллюминации</span>
+                <span class="logo__text">Производство световых<br> новогодних декораций</span>
             </div> <!-- // logo -->
 
         </div> <!-- // adress__col -->
 
         <div class="adress__col  map">
-            <a href="https://yandex.ru/maps/?um=constructor%3Afdc64632d89870977fa8f8b9b1ce16198671a5f06c4d72ba0f4c244acde91244&amp;source=constructorStatic" target="_blank">
-                <img class="adress__img" src="../assets/img/footer/map.jpg" alt="map" />
-            </a>
-
+            <div class="adress__yandex-map" id="map_container">
+                <script id="ymap_lazy" type="text/javascript" charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afdc64632d89870977fa8f8b9b1ce16198671a5f06c4d72ba0f4c244acde91244&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
             <div class="adress__rect"></div>
         </div>
 

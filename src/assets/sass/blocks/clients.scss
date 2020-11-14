@@ -2,7 +2,7 @@
     position: relative;
 
     margin-top: 16rem;
-    padding: 130px 0 115px;
+    padding: 13rem 0 115px;
 
     background-color: $bg_blue;
 }
@@ -23,10 +23,20 @@
     top: 30px;
 
     animation: linear scale 1s infinite alternate;
+
+    @include media-breakpoint-down(sm) {
+        right: 20px;
+        top: 10px;
+        left: unset;
+    }
 }
 
 .clients__row {
     display: flex;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
 }
 
 .clients__col {
@@ -75,6 +85,10 @@
         transform: rotate(45deg);
         background-color: $pink;
     }
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 40px;
+    }
 }
 
 .clients__btn {
@@ -85,11 +99,16 @@
     height: 46px;
 
     border-radius: 23px;
+
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        bottom: 50px;
+    }
 }
 
 .clients__line {
     position: absolute;
-    left: -340px;
+    left: calc(50% - 1050px);
     bottom: 233px;
 
     width: 625px;
@@ -108,18 +127,35 @@
 
         background-color: $pink;
     }
+
+    @include media-breakpoint-between(md, lg) {
+        bottom: 260px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        left: 0;
+        bottom: 70px;
+        width: 25vw;
+    }
 }
 
 .clients__box {
     width: fit-content;
     flex-basis: 25%;
 
-    height: 115px;
     line-height: 115px;
 
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        flex-basis: 33%;
+    }
 }
 
 .clients__img {
     vertical-align: middle;
+
+    @include media-breakpoint-between(xs, lg) {
+        width: 12rem;
+    }
 }

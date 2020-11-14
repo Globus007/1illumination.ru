@@ -1,10 +1,10 @@
 .form__input {
-    display: block;
+    display: inline-block;
 
-    width: 361px;
-    height: 55px;
+    width: 36rem;
+    height: 5.5rem;
 
-    padding-left: 2.1rem;
+    padding-left: 21px;
     margin-bottom: 15px;
 
     font-family: inherit;
@@ -17,6 +17,11 @@
 
     &::placeholder {
         font-size: 1.4rem;
+        transition: .2s linear;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 2rem;
+        }
     }
 
     &:focus::placeholder,
@@ -29,6 +34,22 @@
     &:active {
         outline: none;
     }
+
+    @include media-breakpoint-down(sm) {
+        height: 9rem;
+        font-size: 2rem;
+    }
+}
+
+.form__input--modal {
+    width: 358px;
+    height: 46px;
+
+    @include media-breakpoint-down(sm) {
+        width: 50rem;
+        height: 9rem;
+        border-radius: 27.5px;
+    }
 }
 
 .form__input--footer {
@@ -37,12 +58,26 @@
 }
 
 .form__btn {
-    width: 358px;
-    height: 46px;
+    width: 35.8rem;
+    height: 4.6rem;
 
-    border-radius: 22.4px;
+    border-radius: 2.24rem;
+
+    @include media-breakpoint-down(sm) {
+        border-radius: 27.5px;
+        height: 9rem;
+    }
 }
 
 .form__thanks {
     display: none;
+
+    height: 18.6rem;
+    font-size: 1.7rem;
+    color: $pink;
+}
+
+.form__thanks--modal {
+    text-align: center;
+        height: 16.8rem;
 }

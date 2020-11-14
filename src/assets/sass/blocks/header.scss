@@ -1,29 +1,111 @@
+.header--fixed {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+
+    width: 100%;
+
+    background-color: rgba(32, 2, 85, 70%);
+    border-bottom: solid 1px #3c246b;
+}
+
 header {
-    padding-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-breakpoint-down(sm) {
+        margin: 0;
+
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        background-color: #200255;
+        border-bottom: solid 1px #3c246b;
+
+        z-index: 999;
+
+        justify-content: flex-start;
+
+        &.container {
+            max-width: unset;
+        }
+    }
 }
 
 .header__logo {
     flex-basis: 40%;
+
+    @include media-breakpoint-between(md, lg) {
+        flex-basis: 36%;
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-basis: unset;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-left: 15px;
+    }
 }
 
 .header__social {
     flex-basis: 5%;
+
+    @include media-breakpoint-down(md) {
+        flex-basis: unset;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 }
 
 .header__buttons {
-    flex-basis: 31%;
-
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.header__phone {
-    flex-basis: 25%;
+    flex-basis: 28%;
 
     display: flex;
     justify-content: space-between;
+
+    @include media-breakpoint-between(md, lg) {
+        flex-basis: 33%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+
+    .btn + .btn {
+        margin-left: 10px;
+    }
+}
+
+.header__phone {
+    flex-basis: 26%;
+
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
+
+    @include media-breakpoint-between(md, lg) {
+        flex-basis: 23%;
+    }
+
+    @include media-breakpoint-down(md) {
+        flex-basis: unset;
+    }
+
+    @include media-breakpoint-down(sm) {
+        justify-content: center;
+        flex-grow: 1;
+    }
+}
+
+.header__line {
+    width: 100%;
+    height: 1px;
+    opacity: 0.3;
+    background-color: #dedede;
 }

@@ -1,5 +1,18 @@
 .projects {
-    margin-top: 150px;
+    position: relative;
+    margin-top: 15rem;
+}
+
+.projects__col {
+    @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.projects__col + .projects__col {
+    margin-top: 35px;
 }
 
 .projects__text {
@@ -13,6 +26,10 @@
     & .one {
         font-size: 14rem;
     }
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
 }
 
 .projects__title {
@@ -21,6 +38,10 @@
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
 }
 
 .projects__btn {
@@ -48,10 +69,10 @@
 
 .projects__line {
     position: absolute;
-    right: -500px;
+    right: 0;
     bottom: 145px;
 
-    width: 625px;
+    width: 15vw;
     height: 1px;
     background-color: #4d397b;
 
@@ -65,5 +86,13 @@
         transform: rotate(45deg);
 
         background-color: $pink;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+        width: 12vw;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 10vw;
     }
 }

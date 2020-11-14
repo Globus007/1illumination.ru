@@ -1,0 +1,31 @@
+.modal-projects__img {
+    width: 90vh;
+    height: 70vh;
+
+    max-width: 800px;
+    max-height: 615px;
+
+    @include media-breakpoint-down(md) {
+        max-width: 490px;
+        max-height: 380px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        max-width: 95vw;
+        max-height: 73vw;
+    }
+}
+
+.modal-project__slider {
+    padding: 0 0 20px;
+
+    &.slick-initialized .slick-slide {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.modal-project__body {
+    flex-direction: column;
+    padding: 0 0 10px;
+}
